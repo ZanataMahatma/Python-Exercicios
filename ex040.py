@@ -1,4 +1,20 @@
-produto = float(input('Insira o Valor do Produto: '))
-lista = int(input('Digite a forma de pagamento.\n 1 - Dinheiro\n 2 - Cheque\n 3 - Cartão\n Digite: '))
-if lista != 1 and lista != 2 and lista != 3:
-    print('Comando Invalido... Tente Novamente.')
+'''Exercício Python 040: Crie um programa que leia duas notas de um aluno e calcule sua média,
+ mostrando uma mensagem no final, de acordo com a média atingida:
+
+– Média abaixo de 5.0: REPROVADO
+
+– Média entre 5.0 e 6.9: RECUPERAÇÃO
+
+– Média 7.0 ou superior: APROVADO'''
+
+
+nota1 = float(input('Primeira Nota: '))
+nota2 = float(input('Segunda Nota: '))
+media = (nota1 + nota2) /2
+print('Tirando {:.1f} e {:.1f}, a média do aluno é {:.1f}'.format(nota1,nota2,media))
+if 7 > media >=5:
+    print('O aluno está em RECUPERAÇÃO.')
+elif media < 5:
+    print('O aluno está REPROVADO.')
+elif media >= 7:
+    print('O aluno está APROVADO.')
