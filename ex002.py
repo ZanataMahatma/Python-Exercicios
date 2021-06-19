@@ -1,2 +1,2 @@
 a = input('Digite Algo')
- print('O tipo primitivo desse valor é:'a =val)
+print('O tipo primitivo desse valor é:')
