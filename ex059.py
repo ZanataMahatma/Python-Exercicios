@@ -1,10 +1,8 @@
-repete = 'sim'
+repete = 'SIM'
 s = 0
-while repete == 'sim':
+while repete == 'SIM':
     n1 = int(input('Digite o Primeiro Valor:'))
     n2 = int(input('Digite o Segundo Valor'))
-    repete = 'nao'.upper()
-while s != 5 and repete != 'sim':
     s = int(input('''
     [1] SOMAR
     [2] MULTIPLICAR
@@ -23,7 +21,9 @@ while s != 5 and repete != 'sim':
             print('Primeiro Valor digitado é maior {}'.format(n1))
         else:
             print('Segundo valor digitado é maior {}'.format(n2))
-    if s == 4:
-        repete = 'sim'
+    elif s == 4:
+        repete = 'SIM'
+    else:
+        repete = 'NÃO'
 
 print('Fim do Programa')
