@@ -1,19 +1,19 @@
-r = 'N'
-c = 1
-count = 1
+repete = 'S'
+c = 0
+n1 = 0
 pa = 0
-A = 10
-
-
-while count < A or r == 'S':
+a1 = 0
+while repete == 'S':
     c = int(input('Digite o numero da PA:'))
-    pa = c * count
-    count = count + 1
-    print('Termo da Progressão {}'.format(pa))
-    if count == A:
-        A = A + 10
-        count = 0
-        r = str(input('Deseja continuar [S/N]? ')).upper().strip()
+    a1 = int(input('Quantos termos vc quer ? '))
+    if a1 != 0:
+        while n1 < a1:
+            pa = c * n1
+            n1 = n1 + 1
+            print('Termo da Progressão {}'.format(pa))
+    repete = str(input('Deseja continuar [S/N]?')).upper()
+    while repete != 'S' and repete != 'N':
+        repete = input('Comando inválido. Digite sim ou não: ').upper()
+print('Fim{}'.format(a1))
 
-print('Fim')
 
