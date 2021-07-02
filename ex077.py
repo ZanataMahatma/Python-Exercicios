@@ -10,7 +10,7 @@ palavras = ('aprender','programar','linguagem','python',
 
 for p in palavras: # para cada posição  das palavras
     print(f'\nNa palavra {p.upper()} temos - ',end='') #imprima posição.
-    for letra in p:#
+    for letra in p:# se a letra estiver em P
         if letra.lower() in 'aeiou':#para cada letra da posição, se a letra conter  'aeiou'
             print(letra,end=' ')#imprima letra.
 
