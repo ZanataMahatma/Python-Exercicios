@@ -1,20 +1,29 @@
-repete = 'sim'
-while repete == 'sim':
-    numero = int(input('Digite qual número inteiro deseja saber se é primo: '))
-    cont = 0
-    lista= []
-    for i in range(1,numero + 1):
-        calc = numero % i
-        if calc == 0:
-            print(f'Numero é divisível por {i}.')
-            cont +=1
-            lista.append(i)
-    if cont == 2:
-        print(f'O número {numero} pode ser dividido {cont} vezes; pelos numeros {lista}. Ele é primo.')
-    else:
-        print(f'O número {numero} pode ser dividido {cont} vezes; pelos números {lista}. Ele não é primo')
-    repete = input('Gostaria de testar outro número? Digite sim ou não: \n').lower()
-
-    while repete != 'sim' and repete != 'não':
-            repete = input('Opção inválida ? Digite sim ou não: \n').lower()
-print('Até a próxima!')
+'''
+Exercício Python 089: Crie um programa que leia nome e duas notas de
+vários alunos e guarde tudo em uma lista composta.
+No final, mostre um boletim contendo a média de cada um e permita
+que o usuário possa mostrar as notas de cada aluno individualmente.
+'''
+lista = list()
+while True:
+    nome = str(input('Nome: '))
+    nota1= float(input('Nota1: '))
+    nota2= float(input('Nota2: '))
+    media = (nota1 + nota2) /2
+    lista.append([nome,[nota1,nota2],media])
+    resp = str(input('Deseja continuar? [S/N]'))
+    if resp in 'Nn':
+        break
+print('-=' * 30)
+print(f'{"No":<4}{"NOME":<10}{"MEDIA":>8}')
+print('-='*30)
+for i,v in enumerate(lista):
+    print(f'{i:<4}{v[0]:<10}{v[2]:>8.1f}')
+while True:
+    opc = int(input('Mostrar notas de qual aluno ? (999 interrompe): '))
+    if opc == 999:
+        print('Finalizando...')
+        break
+    elif opc <= len(lista):
+        print(f'Notas de {lista[opc][0]} são {lista[opc][1]}')
+print('VOLTE SEMPRE')
