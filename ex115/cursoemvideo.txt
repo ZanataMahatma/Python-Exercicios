@@ -1,0 +1,3 @@
+José;35
+Zanata;28
+Maria;85
